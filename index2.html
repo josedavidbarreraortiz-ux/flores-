@@ -935,24 +935,34 @@ body {
   0%, 100% { transform: scale(0.35) rotate(-45deg) rotateY(-120deg); }
   50% { transform: scale(0.35) rotate(-42deg) rotateY(-115deg); }
 }
-.floating-message {
+..floating-message {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.7);
   color: #ffd700;
-  font-size: 1.1rem;   /* 🔹 antes era 1.5rem */
-  line-height: 1.5;    /* 🔹 mejor lectura en párrafos */
-  font-weight: normal; /* 🔹 menos pesado para poemas */
-  max-width: 80%;      /* 🔹 no se extienda demasiado */
+  font-size: 1.1rem;   /* tamaño base */
+  line-height: 1.5;
+  font-weight: normal;
+  max-width: 80%;
   padding: 15px 20px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
   z-index: 9999;
   animation: floatGlow 3s ease-in-out infinite;
-  white-space: pre-line; /* 🔹 respeta saltos de línea en poemas */
+  white-space: pre-line;
+}
+
+/* 🔹 Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+  .floating-message {
+    font-size: 0.9rem;   /* más pequeño en móvil */
+    line-height: 1.4;
+    max-width: 90%;      /* que no se corte el texto */
+    padding: 10px 15px;
+  }
 }
 }
 
