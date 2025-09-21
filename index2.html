@@ -935,21 +935,25 @@ body {
   0%, 100% { transform: scale(0.35) rotate(-45deg) rotateY(-120deg); }
   50% { transform: scale(0.35) rotate(-42deg) rotateY(-115deg); }
 }
-        .floating-message {
+.floating-message {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.7);
   color: #ffd700;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 15px 25px;
+  font-size: 1.1rem;   /* 🔹 antes era 1.5rem */
+  line-height: 1.5;    /* 🔹 mejor lectura en párrafos */
+  font-weight: normal; /* 🔹 menos pesado para poemas */
+  max-width: 80%;      /* 🔹 no se extienda demasiado */
+  padding: 15px 20px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
   z-index: 9999;
   animation: floatGlow 3s ease-in-out infinite;
+  white-space: pre-line; /* 🔹 respeta saltos de línea en poemas */
+}
 }
 
 @keyframes floatGlow {
@@ -965,7 +969,17 @@ body {
     </style>
 </head>
 <div class="floating-message">
-    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+I can’t hand you the flowers in person today,
+so I’m sending you these yellow ones instead 
+just to remind you, you’re always on my mind.
+
+We only met once, but honestly, that was enough
+for me to feel something I can’t shake.
+Even with all this distance, my days feel lighter with you,
+and I keep dreaming of the moment I can give you real flowers. 
+
+I just want this to last, and I’m sorry if I’m too intense sometimes…
+but I’ll wait for you, no matter how long it takes. 🖤
   </div>
 
 <body class="not-loaded">
